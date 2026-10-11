@@ -1,0 +1,12 @@
+CiPHER // INTERCEPTED PROCUREMENT MEMO
+Reference: PROCUREMENT-17 | Origin: NEXUS acquisition desk
+
+Your task: identify the ONE supplier meeting every condition below, then investigate suppliers and complete the calculation checkpoint below. A company ID alone is not a complete answer.
+1. Calculate the market equilibrium AFTER both interventions in the market report. The new equilibrium price is the ceiling for a supplier's ALL-IN unit price.
+2. All-in unit price = base quote + freight per unit - rebate per unit. Reject prices above the ceiling.
+3. Required monthly capacity = 80% of the new equilibrium market quantity. Supplier capacity must meet or exceed this requirement.
+4. The supplier must own its assembly facility. Leased facilities and resellers do not qualify.
+5. Deployment must finish within 30 days: assembly days + transit days. Both periods run consecutively.
+6. Adjusted operating margin must be at least 15%. Remove the one-off grant included in reported operating profit: (reported operating profit - one-off grant) / revenue × 100.
+7. Include equality when comparing all thresholds. Do not round intermediate calculations.
+You have 16 audit credits. Each new supplier audit costs one credit; reopening a recovered record is free. Choose commercial, operations or financial audits to expose the evidence. Enter equilibrium price, equilibrium quantity and required capacity, then enter the selected supplier’s all-in price, available capacity, total deployment days and adjusted margin. Enter margins as percentages rounded to TWO decimal places; do not round earlier calculations. Include your chosen registry ID (K followed by two digits). All entries must be correct together to complete this checkpoint. Your budget and evidence persist in this browser. Once credits run out, use recovered records.
