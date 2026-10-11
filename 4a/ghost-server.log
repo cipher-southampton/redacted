@@ -1,0 +1,28 @@
+CiPHER // RECOVERED NETWORK EVIDENCE
+Artifact: GS-0330 | Capture: 03:30:00 UTC
+Integrity: DEGRADED | Sequence numbers survived; timestamps did not.
+
+[03:30:??] seq=07 stream=heartbeat payload=7C crc=PASS
+[03:30:??] seq=04 stream=identity payload=1D crc=PASS
+[03:30:??] seq=00 stream=heartbeat payload=FF crc=FAIL
+[03:30:??] seq=08 stream=identity payload=14 crc=PASS
+[03:30:??] seq=02 stream=identity payload=0C crc=PASS
+[03:30:??] seq=05 stream=identity payload=07 crc=PASS
+[03:30:??] seq=03 stream=identity payload=00 crc=FAIL
+[03:30:??] seq=01 stream=identity payload=00 crc=PASS
+[03:30:??] seq=06 stream=identity payload=08 crc=PASS
+[03:30:??] seq=03 stream=heartbeat payload=11 crc=PASS
+[03:30:??] seq=09 stream=identity payload=19 crc=PASS
+[03:30:??] seq=03 stream=identity payload=1F crc=PASS
+[03:30:??] seq=06 stream=identity payload=08 crc=FAIL
+[03:30:??] seq=04 stream=heartbeat payload=33 crc=PASS
+[03:30:??] seq=07 stream=identity payload=04 crc=PASS
+
+RECOVERY NOTE
+Integrity is not proof of relevance. Retain only intact identity records.
+Restore the identity stream in ascending sequence order.
+Discard records that fail CRC or belong to another stream.
+The identity was masked with repeating-key XOR; the key begins at byte zero.
+Recover the masking key from the archive's original source.
+Read the decoded bytes as ASCII.
+Do not infer missing timestamps from sequence order.
