@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>CiPHER | The Ghost Server</title>
+  <meta name="description" content="Recovered archive. Investigation 4A: The Ghost Server.">
+  <style>
+    :root { color-scheme: dark; --ink:#e0e8e2; --muted:#9baea4; --green:#b5f78b; --line:#304037; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#0b100e; color:var(--ink); font:15px/1.7 'Courier New',monospace; }
+    body:before { content:''; position:fixed; inset:0; pointer-events:none; background:repeating-linear-gradient(transparent 0 3px,#ffffff02 3px 4px); }
+    main { max-width:1100px; margin:auto; padding:32px 28px 60px; }
+    header { display:flex; justify-content:space-between; gap:15px; padding-bottom:23px; border-bottom:1px solid var(--line); font-size:12px; letter-spacing:2px; }
+    .status,.eyebrow,.label { color:var(--green); }
+    .eyebrow { letter-spacing:3px; font-size:12px; margin-top:56px; }
+    h1 { font-family:Arial,sans-serif; font-size:clamp(42px,7vw,78px); line-height:1.05; letter-spacing:-3px; margin:15px 0 22px; }
+    p { max-width:710px; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:1.4fr 1fr; gap:25px; margin-top:35px; }
+    .panel { border:1px solid var(--line); background:#111914; padding:26px; min-width:0; }
+    .label { font-size:11px; letter-spacing:2px; }
+    h2 { font-size:19px; margin:12px 0; }
+    pre { white-space:pre-wrap; overflow-wrap:anywhere; font-size:12px; line-height:1.8; background:#090e0b; padding:20px; border-left:2px solid var(--green); color:#c6d5cc; }
+    a,button { color:var(--green); }
+    .button { display:inline-block; text-decoration:none; border:1px solid #567047; background:#1a291b; padding:11px 16px; font:inherit; cursor:pointer; }
+    label { display:block; font-size:12px; margin:24px 0 8px; }
+    input { width:100%; background:#080d0a; color:var(--ink); border:1px solid #526156; padding:14px; font:18px 'Courier New',monospace; text-transform:uppercase; border-radius:0; }
+    input:focus,button:focus-visible,a:focus-visible { outline:2px solid var(--green); outline-offset:3px; }
+    form button { width:100%; margin-top:12px; }
+    #result { min-height:55px; font-size:13px; }
+    details { border-top:1px solid var(--line); padding:13px 0; font-size:13px; }
+    summary { cursor:pointer; color:var(--ink); }
+    details p { margin-bottom:0; }
+    .footer { border-top:1px solid var(--line); margin-top:35px; padding-top:18px; font-size:11px; color:var(--muted); letter-spacing:1px; }
+    .success { color:var(--green)!important; }
+    @media(max-width:750px) { .grid { grid-template-columns:1fr; } main { padding:22px 18px; } header { font-size:10px; letter-spacing:1px; } .panel { padding:20px; } .eyebrow { margin-top:35px; } h1 { letter-spacing:-2px; } }
+  </style>
+</head>
+<body><nav style="max-width:1100px;margin:auto;padding:18px 28px;font:13px Courier New,monospace"><a href="../" style="color:#b5f78b">← Return to recovered archive</a></nav>
+  <!-- CiPHER ARCHIVE / BOOT DIAGNOSTICS
+       The boot ledger was recovered out of display order.
+       Reconstruct the documented boot order before using the subsystem names.
+       Do not treat timestamps as a reliable ordering source. -->
+  <!-- boot-record: Node Integrity Monitor / boot-index=01 -->
+  <!-- boot-record: Exchange Relay / boot-index=02 -->
+  <!-- boot-record: X-frame Dispatcher / boot-index=03 -->
+  <!-- boot-record: Uplink Synchronizer / boot-index=04 -->
+  <!-- boot-record: Session Vault / boot-index=05 -->
+  <main>
+    <header><strong>CiPHER / SIGNAL INTELLIGENCE</strong><span class="status">ARCHIVE RECOVERED ●</span></header>
+    <div class="eyebrow">INVESTIGATION 4A / GS-0330</div>
+    <h1>The Ghost Server</h1>
+    <p>NEXUS erased its routing table before we could isolate the host. A damaged capture survived. Somewhere inside it is the alias of the server receiving the diverted funds.</p>
+    <p>Recover the identity. Give the alias to your teammates. The financial trail cannot be matched without it.</p>
+    <div class="grid">
+      <section class="panel">
+        <div class="label">01 / RECOVERED EVIDENCE</div>
+        <h2>A signal in the wreckage.</h2>
+        <p>The capture is out of order. Some records failed integrity checks; others belong to unrelated streams. Use the recovery note inside the file.</p>
+        <a class="button" href="ghost-server.log" download>↓ Download capture (.log)</a>
+        <pre id="capture">[03:30:??] seq=07 stream=heartbeat payload=7C crc=PASS
+[03:30:??] seq=04 stream=identity payload=1D crc=PASS
+[03:30:??] seq=00 stream=heartbeat payload=FF crc=FAIL
+[03:30:??] seq=08 stream=identity payload=14 crc=PASS
+[03:30:??] seq=02 stream=identity payload=0C crc=PASS
+[03:30:??] seq=05 stream=identity payload=07 crc=PASS
+[03:30:??] seq=03 stream=identity payload=00 crc=FAIL
+[03:30:??] seq=01 stream=identity payload=00 crc=PASS
+[03:30:??] seq=06 stream=identity payload=08 crc=PASS
+[03:30:??] seq=03 stream=heartbeat payload=11 crc=PASS
+[03:30:??] seq=09 stream=identity payload=19 crc=PASS
+[03:30:??] seq=03 stream=identity payload=1F crc=PASS
+[03:30:??] seq=06 stream=identity payload=08 crc=FAIL
+[03:30:??] seq=07 stream=identity payload=04 crc=PASS</pre>
+        <p style="font-size:12px">Researcher's annotation: “The visible archive is incomplete. The source preserves the boot ledger; names and order both matter.”</p>
+      </section>
+      <section class="panel">
+        <div class="label">02 / IDENTIFY THE HOST</div>
+        <h2>Submit recovered alias</h2>
+        <p>Recover the host alias from the damaged identity stream. Preserve the result for the joint investigation.</p>
+        <form id="verify">
+          <label for="alias">SERVER ALIAS</label>
+          <input id="alias" name="alias" maxlength="32" placeholder="Enter alias" autocomplete="off" spellcheck="false" required>
+          <button class="button" type="submit">Verify identity →</button>
+        </form>
+        <p id="result" role="status" aria-live="polite"></p>
+        <div class="label">RECOVERY ASSISTANCE / OPTIONAL</div>
+        <details>
+          <summary>Hint 01 — Find the key</summary>
+          <p>Open this page's source (often Ctrl+U or ⌘⌥U). Find the boot-record comments and read the subsystem names in boot-index order. The first character of each name is significant.</p>
+        </details>
+        <details>
+          <summary>Hint 02 — Repair the stream</summary>
+          <p>Keep only stream=identity records with crc=PASS. Sort by ascending sequence number, starting at seq=01. Ignore heartbeat records and failed integrity checks.</p>
+        </details>
+        <details>
+          <summary>Hint 03 — Decode the bytes</summary>
+          <p>Convert each payload from hexadecimal to a byte. XOR each byte with the corresponding ASCII byte of the repeating key, starting at the key's first character for seq=01. Convert the results to ASCII.</p>
+        </details>
+      </section>
+    </div>
+    <div class="footer">PROJECT LAST OVERRIDE / KEEP THIS EVIDENCE / CiPHER COMMAND</div>
+  </main>
+  <script>
+    const expected = 'c38f95d861d6d5a5c36ecbe913be5cc9f9d894cf55499cf3c6b6d1302b167992';
+    document.getElementById('verify').addEventListener('submit', async e => {
+      e.preventDefault();
+      const value = document.getElementById('alias').value.trim().toUpperCase();
+      const result = document.getElementById('result');
+      try {
+        const digest = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value));
+        const hash = Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, '0')).join('');
+        const ok = hash === expected;
+        result.classList.toggle('success', ok);
+        result.textContent = ok
+          ? 'IDENTITY CONFIRMED: ' + value + '. Record this alias. Combine it with the company ID and transfer amount from investigations 4B and 4C.'
+          : 'IDENTITY NOT CONFIRMED. Check record integrity, sequence order, and key alignment.';
+      } catch {
+        result.textContent = 'Verification unavailable in this browser. Keep your recovered alias and check with CiPHER Command.';
+      }
+    });
+  </script>
+</body>
+</html>
