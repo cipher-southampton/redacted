@@ -1,0 +1,9 @@
+CiPHER // MARKET INTELLIGENCE
+Market: modular compute units | Currency: credits
+P = credits per unit. Q = units per month.
+Original demand: Qd = 840 - 3P
+Original supply: Qs = 2P - 60
+Demand intervention: at EVERY price, monthly quantity demanded increases by 120 units.
+Supply disruption: at EVERY price, monthly quantity supplied decreases by 80 units.
+Apply BOTH changes before finding equilibrium. At equilibrium, Qd = Qs. Substitute the equilibrium price into either UPDATED equation to find the equilibrium quantity.
+The procurement ceiling uses the market price P; do not add supplier freight to the market equations.
